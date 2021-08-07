@@ -17,7 +17,7 @@ export const NameDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15%;
+  height: 45px;
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -27,16 +27,19 @@ export const NameDiv = styled.div`
     color: var(--black);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-  }
 `
 
 export const ImgDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85%;
+  height: 255px;
   width: 100%;
-  border-bottom-left-radius: 8px ;
-  border-bottom-right-radius: 8px ;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+
+  img {
+    height: 255px;
   }
-  `
+`
