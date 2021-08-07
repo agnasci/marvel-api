@@ -36,9 +36,11 @@ function Home() {
               '.' +
               item.thumbnail.extension,
             name: item.name,
+            series: item.series.items,
           })
         })
         setCharacterList(charactersArray)
+        // console.log(response)
       })
       .catch(error => {
         console.log('error', error)
@@ -50,6 +52,7 @@ function Home() {
       <NavBar />
 
       <CardsContainer>
+        {console.log(characterList)}
         {characterList.length > 0 &&
           characterList.map((item, index) => {
             return <CharacterCard key={index} character={item} />
