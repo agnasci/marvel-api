@@ -2,38 +2,41 @@ import styled from 'styled-components'
 
 export const MainContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  background-color: var(--blue);
-  height: 70px;
-  width: 100vw;
+  background-color: var(--white);
+  height: 300px;
+  width: 200px;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
   }
-
   `
-
-export const NavDiv = styled.div`
+export const NameDiv = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  width: 50%;
+  height: 15%;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 2px solid var(--blue);
 
-  img {
-    height: 40px;
-    border: 1px solid var(--white);
+  span {
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
   }
-  
-  input {
-    padding: 10px;
-    background-color: #f2f3f5;
-    color: #000000;
-    border: none;
-    border-radius: 8px;
-    font: 14px 'Inter', sans-serif;
-    width: 250px;
+`
 
-    &:focus {
-      outline: none;
-    }
+export const ImgDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  width: 100%;
+  border-bottom-left-radius: 8px ;
+  border-bottom-right-radius: 8px ;
+  }
   `

@@ -1,21 +1,17 @@
 import React from 'react'
 
-import { MainContainer, NavDiv } from './styles'
+import { MainContainer, NameDiv, ImgDiv } from './styles'
 
-const NavBar = () => {
+const CharacterCard = () => {
   return (
     <MainContainer>
-      <NavDiv>
-        <img src="images/marvel-logo.svg" alt="Logo Marvel" />
-      </NavDiv>
+      <NameDiv>
+        <span>Personagem</span>
+      </NameDiv>
 
-      <NavDiv>
-        <form>
-          <input type="text" />
-        </form>
-      </NavDiv>
+      <ImgDiv />
     </MainContainer>
   )
 }
 
-export default NavBar
+export default CharacterCard
