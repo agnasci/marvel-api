@@ -1,31 +1,26 @@
 import React from 'react'
 
-import { MainContainer, CardsContainer } from './styles'
+import {
+  MainContainer,
+  ContentContainer,
+  CharacterImg,
+  CharacterName,
+} from './styles'
 
 import HeaderInfo from '../../components/HeaderInfo'
-import CharacterCard from '../../components/CharacterCard'
 
-function Home() {
+function InfoCharacter() {
   return (
     <MainContainer>
       <HeaderInfo />
 
-      <CardsContainer>
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-        <CharacterCard />
-      </CardsContainer>
+      <ContentContainer>
+        <CharacterImg />
+
+        <CharacterName>Personagem</CharacterName>
+      </ContentContainer>
     </MainContainer>
   )
 }
 
-export default Home
+export default InfoCharacter

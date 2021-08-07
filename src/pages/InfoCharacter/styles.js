@@ -9,12 +9,25 @@ export const MainContainer = styled.div`
   background-color: var(--grey);
 `
 
-export const CardsContainer = styled.div`
+export const ContentContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   min-width: 95vw;
-  max-width: 95vw;
   flex-wrap: wrap;
+`
+
+export const CharacterImg = styled.div`
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+  background-color: var(--white);
+`
+
+export const CharacterName = styled.span`
+  font-family: 'Inter', sans-serif;
+  color: var(--white);
+  font-size: 24px;
+  margin-top: 15px;
 `

@@ -1,13 +1,26 @@
 import React from 'react'
 
-import { MainContainer, Test } from './styles'
+import {
+  MainContainer,
+  ContentContainer,
+  CharacterImg,
+  CharacterName,
+} from './styles'
 
-function Home() {
+import HeaderInfo from '../../components/HeaderInfo'
+
+function InfoCharacter() {
   return (
     <MainContainer>
-      <Test>Teste</Test>
+      <HeaderInfo />
+
+      <ContentContainer>
+        <CharacterImg />
+
+        <CharacterName>Personagem</CharacterName>
+      </ContentContainer>
     </MainContainer>
   )
 }
 
-export default Home
+export default InfoCharacter
