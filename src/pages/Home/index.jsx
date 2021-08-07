@@ -2,10 +2,12 @@ import React from 'react'
 
 import { MainContainer } from './styles'
 
+import NavBar from '../../components/NavBar'
+
 function Home() {
   return (
     <MainContainer>
-      <span>Teste</span>
+      <NavBar />
     </MainContainer>
   )
 }

@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
+import GlobalStyle from './styles/global'
+
 // Pages
 
 import Home from './pages/Home'
@@ -17,6 +19,7 @@ function App() {
           <Route path="/details/:id" exact component={InfoCharacter} />
           <Route path="/details/:id/edit" exact component={EditInfoCharacter} />
         </Switch>
+        <GlobalStyle />
       </Router>
     </>
   )

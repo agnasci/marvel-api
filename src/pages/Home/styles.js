@@ -4,15 +4,8 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-
-  span {
-    color: red;
-    font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: var(--grey);
   }
 `
-
-// export const Test = styled.span`
-//   color: red;
-//   font-family: 'Inter', sans-serif;
-// `
