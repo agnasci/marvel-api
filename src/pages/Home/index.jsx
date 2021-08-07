@@ -1,12 +1,12 @@
 import React from 'react'
-import AppBar from '../components/AppBar'
+
+import { MainContainer } from './styles'
 
 function Home() {
   return (
-    <>
-      <AppBar />
+    <MainContainer>
       <span>Teste</span>
-    </>
+    </MainContainer>
   )
 }
 
