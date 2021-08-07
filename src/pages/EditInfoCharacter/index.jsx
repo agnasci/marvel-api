@@ -1,11 +1,6 @@
 import React from 'react'
 
-import {
-  MainContainer,
-  ContentContainer,
-  CharacterImg,
-  CharacterName,
-} from './styles'
+import { MainContainer, ContentContainer } from './styles'
 
 import HeaderInfo from '../../components/HeaderInfo'
 
@@ -15,9 +10,11 @@ function InfoCharacter() {
       <HeaderInfo />
 
       <ContentContainer>
-        <CharacterImg />
-
-        <CharacterName>Personagem</CharacterName>
+        <form>
+          <input type="text" />
+          <span>Teste</span>
+          <input type="text" />
+        </form>
       </ContentContainer>
     </MainContainer>
   )

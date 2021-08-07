@@ -2,14 +2,16 @@ import React from 'react'
 
 import { MainContainer, NameDiv, ImgDiv } from './styles'
 
-const CharacterCard = () => {
+const CharacterCard = ({ character }) => {
   return (
     <MainContainer>
       <NameDiv>
-        <span>Personagem</span>
+        <span>{character.name}</span>
       </NameDiv>
 
-      <ImgDiv />
+      <ImgDiv>
+        <img src={character.imgCard} alt={character.name + ' ' + 'image.'} />
+      </ImgDiv>
     </MainContainer>
   )
 }

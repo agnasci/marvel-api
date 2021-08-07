@@ -5,12 +5,10 @@ export const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: var(--white);
-  height: 300px;
-  width: 200px;
+  height: 495px;
+  width: 300px;
   border-radius: 8px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   }
   `
 export const NameDiv = styled.div`
@@ -26,20 +24,16 @@ export const NameDiv = styled.div`
   span {
     color: var(--black);
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 800;
 `
 
 export const ImgDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 255px;
+  height: 450px;
   width: 100%;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   overflow: hidden;
-
-  img {
-    height: 255px;
-  }
 `

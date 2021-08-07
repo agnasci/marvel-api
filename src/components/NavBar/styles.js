@@ -7,7 +7,7 @@ export const MainContainer = styled.div`
   background-color: var(--blue);
   height: 70px;
   width: 100vw;
-  margin-bottom: 45px;
+  margin-bottom: 60px;
   }
 
   `
