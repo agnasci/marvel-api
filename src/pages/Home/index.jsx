@@ -50,7 +50,6 @@ function Home() {
       <NavBar />
 
       <CardsContainer>
-        {console.log(characterList)}
         {characterList.length > 0 &&
           characterList.map((item, index) => {
             return <CharacterCard key={index} character={item} />
