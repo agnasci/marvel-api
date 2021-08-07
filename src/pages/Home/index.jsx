@@ -9,7 +9,6 @@ import CharacterCard from '../../components/CharacterCard'
 
 function Home() {
   const [characterList, setCharacterList] = useState([])
-  // const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     getCharacters()
