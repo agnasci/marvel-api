@@ -5,6 +5,10 @@ import {
   ContentContainer,
   CharacterImg,
   CharacterName,
+  InformationDiv,
+  SeriesDiv,
+  SeriesListBox,
+  EditTag,
 } from './styles'
 
 import HeaderInfo from '../../components/HeaderInfo'
@@ -15,9 +19,22 @@ function InfoCharacter() {
       <HeaderInfo />
 
       <ContentContainer>
-        <CharacterImg />
+        <InformationDiv>
+          <CharacterImg />
 
-        <CharacterName>Personagem</CharacterName>
+          <CharacterName>Personagem</CharacterName>
+
+          <EditTag href="/">Editar</EditTag>
+        </InformationDiv>
+
+        <SeriesDiv>
+          <SeriesListBox>
+            <ul>
+              <li>Teste</li>
+              <li>Teste</li>
+            </ul>
+          </SeriesListBox>
+        </SeriesDiv>
       </ContentContainer>
     </MainContainer>
   )

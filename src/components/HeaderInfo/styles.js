@@ -8,10 +8,13 @@ export const MainContainer = styled.div`
   background-color: var(--blue);
   height: 70px;
   width: 100vw;
-  margin-bottom: 45px;
+  margin-bottom: 60px;
 
   img {
     height: 40px;
     border: 1px solid var(--white);
+    &:hover {
+      cursor: pointer;
+    }
   }
 `
