@@ -16,7 +16,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/details/:id" exact component={InfoCharacter} />
+          {/* <Route path="/details/:id" exact component={InfoCharacter} /> */}
+          <Route path="/info" exact component={InfoCharacter} />
           <Route path="/details/:id/edit" exact component={EditInfoCharacter} />
         </Switch>
         <GlobalStyle />
