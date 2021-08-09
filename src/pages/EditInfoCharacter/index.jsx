@@ -1,6 +1,15 @@
 import React from 'react'
 
-import { MainContainer, ContentContainer } from './styles'
+import {
+  MainContainer,
+  ContentContainer,
+  CharacterImg,
+  CharacterName,
+  InformationDiv,
+  SeriesDiv,
+  SeriesListBox,
+  EditButton,
+} from './styles'
 
 import HeaderInfo from '../../components/HeaderInfo'
 
@@ -10,11 +19,21 @@ function InfoCharacter() {
       <HeaderInfo />
 
       <ContentContainer>
-        <form>
-          <input type="text" />
-          <span>Teste</span>
-          <input type="text" />
-        </form>
+        <InformationDiv>
+          <CharacterImg />
+
+          <form>
+            <CharacterName type="text" />
+          </form>
+
+          <EditButton>Editar</EditButton>
+        </InformationDiv>
+
+        <SeriesDiv>
+          <form>
+            <SeriesListBox />
+          </form>
+        </SeriesDiv>
       </ContentContainer>
     </MainContainer>
   )

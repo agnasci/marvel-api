@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import { MainContainer, CardsContainer } from './styles'
 
 import axios from 'axios'
-
 import NavBar from '../../components/NavBar'
 import CharacterCard from '../../components/CharacterCard'
 
@@ -40,7 +39,6 @@ function Home() {
           })
         })
         setCharacterList(charactersArray)
-        // console.log(response)
       })
       .catch(error => {
         console.log('error', error)
@@ -52,7 +50,6 @@ function Home() {
       <NavBar />
 
       <CardsContainer>
-        {console.log(characterList)}
         {characterList.length > 0 &&
           characterList.map((item, index) => {
             return <CharacterCard key={index} character={item} />

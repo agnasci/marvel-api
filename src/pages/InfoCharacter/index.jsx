@@ -24,7 +24,7 @@ function InfoCharacter() {
 
           <CharacterName>Personagem</CharacterName>
 
-          <EditTag href="/">Editar</EditTag>
+          <EditTag href="/edit">Editar</EditTag>
         </InformationDiv>
 
         <SeriesDiv>
