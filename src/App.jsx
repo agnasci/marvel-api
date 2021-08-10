@@ -14,7 +14,6 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import Home from './pages/Home'
 import InfoCharacter from './pages/InfoCharacter'
-import EditInfoCharacter from './pages/EditInfoCharacter'
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/info/:id" exact component={InfoCharacter} />
-              <Route path="/edit/:id/" exact component={EditInfoCharacter} />
             </Switch>
           </PersistGate>
         </Provider>

@@ -13,7 +13,7 @@ function characterStore(state = INITIAL_STATE, action) {
     case 'GET_RESULT':
       return {
         ...state,
-        characterList: action.payload.concat(...state.characterList),
+        characterList: action.payload,
       }
     default:
       return state

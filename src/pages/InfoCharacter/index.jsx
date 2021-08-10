@@ -8,14 +8,11 @@ import {
   InformationDiv,
   SeriesDiv,
   SeriesListBox,
-  EditTag,
 } from './styles'
 
 import HeaderInfo from '../../components/HeaderInfo'
 
 import { useSelector } from 'react-redux'
-
-import { Link } from 'react-router-dom'
 
 function InfoCharacter({ match }) {
   const [characterInfo, setCharacterInfo] = useState({})
@@ -46,14 +43,11 @@ function InfoCharacter({ match }) {
           </CharacterImg>
 
           <CharacterName>{characterInfo.name}</CharacterName>
-
-          <Link to={`/edit/${id}`}>
-            <EditTag>Editar</EditTag>
-          </Link>
         </InformationDiv>
 
         <SeriesDiv>
           <SeriesListBox>
+            <h1>Séries</h1>
             <ul>
               {characterInfo.series ? (
                 <>

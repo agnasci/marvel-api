@@ -38,19 +38,7 @@ export const CharacterName = styled.span`
   color: var(--white);
   font-size: 24px;
   margin-top: 15px;
-`
-
-export const EditTag = styled.span`
-  font-family: 'Inter', sans-serif;
-  color: var(--black);
-  font-size: 16px;
-  margin-top: 15px;
-  text-decoration: none;
-  font-weight: 700;
-  border: 2px solid var(--blue);
-  padding: 5px;
-  border-radius: 8px;
-  background-color: var(--white);
+  margin-bottom: 15px;
 `
 
 export const SeriesDiv = styled.span`
@@ -58,6 +46,7 @@ export const SeriesDiv = styled.span`
   flex-direction: column;
   justify-content: center;
   min-width: 50%;
+  margin-bottom: 15px;
 `
 
 export const SeriesListBox = styled.div`
@@ -65,13 +54,21 @@ export const SeriesListBox = styled.div`
   width: 500px;
   border-radius: 8px;
   background-color: var(--white);
-  border: 4px solid var(--blue);
+  border: 3px solid var(--blue);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--black);
-  font-size: 24px;
+  font-size: 18px;
   font-family: 'Inter', sans-serif;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 15px;
+  }
 
   ul {
     list-style-type: none;

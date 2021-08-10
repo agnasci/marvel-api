@@ -16,19 +16,18 @@ function Home() {
   }))
 
   useEffect(() => {
-    const hasLocalStorage = localStorage.getItem('persist:root')
-    hasLocalStorage || dispatch(fetchMarvelCharacters())
+    dispatch(fetchMarvelCharacters())
   }, [])
 
   return (
     <MainContainer>
-      {filteredCharacterList ? (
+      {characterList ? (
         <>
           <NavBar />
 
           <CardsContainer>
-            {filteredCharacterList.length > 0 &&
-              filteredCharacterList.map((item, index) => {
+            {characterList.length > 0 &&
+              characterList.map((item, index) => {
                 return <CharacterCard key={index} character={item} />
               })}
           </CardsContainer>

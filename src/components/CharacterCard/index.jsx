@@ -6,7 +6,7 @@ import { MainContainer, NameDiv, ImgDiv } from './styles'
 
 const CharacterCard = ({ character }) => {
   return (
-    <Link to={`/info/${character.id}`}>
+    <Link style={{ textDecoration: 'none' }} to={`/info/${character.id}`}>
       <MainContainer>
         <NameDiv>
           <span>{character.name}</span>

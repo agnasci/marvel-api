@@ -9,6 +9,10 @@ export const MainContainer = styled.div`
   width: 300px;
   border-radius: 8px;
   margin-bottom: 50px;
+
+  &:hover {
+    transform: translateY(-7px);
+  }
   }
   `
 export const NameDiv = styled.div`
