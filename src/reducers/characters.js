@@ -10,6 +10,11 @@ function characterStore(state = INITIAL_STATE, action) {
         characterList: action.payload,
       }
 
+    case 'GET_RESULT':
+      return {
+        ...state,
+        characterList: action.payload.concat(...state.characterList),
+      }
     default:
       return state
   }

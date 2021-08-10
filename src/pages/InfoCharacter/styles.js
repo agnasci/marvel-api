@@ -30,6 +30,7 @@ export const CharacterImg = styled.div`
   width: 250px;
   border-radius: 8px;
   background-color: var(--white);
+  overflow: hidden;
 `
 
 export const CharacterName = styled.span`
@@ -39,7 +40,7 @@ export const CharacterName = styled.span`
   margin-top: 15px;
 `
 
-export const EditTag = styled.a`
+export const EditTag = styled.span`
   font-family: 'Inter', sans-serif;
   color: var(--black);
   font-size: 16px;

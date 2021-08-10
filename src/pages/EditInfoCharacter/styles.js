@@ -30,6 +30,7 @@ export const CharacterImg = styled.div`
   width: 250px;
   border-radius: 8px;
   background-color: var(--white);
+  overflow: hidden;
 `
 
 export const CharacterName = styled.input`

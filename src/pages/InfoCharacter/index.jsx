@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {
   MainContainer,
@@ -13,25 +13,57 @@ import {
 
 import HeaderInfo from '../../components/HeaderInfo'
 
-function InfoCharacter() {
+import { useSelector } from 'react-redux'
+
+import { Link } from 'react-router-dom'
+
+function InfoCharacter({ match }) {
+  const [characterInfo, setCharacterInfo] = useState({})
+
+  const { characterList } = useSelector(state => ({
+    characterList: state.characterStore.characterList,
+  }))
+
+  const {
+    params: { id },
+  } = match
+
+  useEffect(() => {
+    const currCharacter = characterList.find(character => +character.id === +id)
+
+    setCharacterInfo(currCharacter)
+    console.log(currCharacter)
+  }, [])
+
   return (
     <MainContainer>
       <HeaderInfo />
 
       <ContentContainer>
         <InformationDiv>
-          <CharacterImg />
+          <CharacterImg>
+            <img src={characterInfo.imgInfo} alt={characterInfo.name} />
+          </CharacterImg>
 
-          <CharacterName>Personagem</CharacterName>
+          <CharacterName>{characterInfo.name}</CharacterName>
 
-          <EditTag href="/edit">Editar</EditTag>
+          <Link to={`/edit/${id}`}>
+            <EditTag>Editar</EditTag>
+          </Link>
         </InformationDiv>
 
         <SeriesDiv>
           <SeriesListBox>
             <ul>
-              <li>Teste</li>
-              <li>Teste</li>
+              {characterInfo.series ? (
+                <>
+                  {characterInfo.series.map((character, idx) => (
+                    <>{idx < 5 && <li key={idx}>{character.name}</li>}</>
+                  ))}
+                </>
+              ) : (
+                <li>Carregando...</li>
+              )}
             </ul>
           </SeriesListBox>
         </SeriesDiv>

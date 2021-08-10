@@ -1,12 +1,14 @@
 import React from 'react'
 
-import store from './store'
+import { store, persistor } from './store'
 
 import { Provider } from 'react-redux'
 
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 import GlobalStyle from './styles/global'
+
+import { PersistGate } from 'redux-persist/integration/react'
 
 // Pages
 
@@ -19,13 +21,13 @@ function App() {
     <>
       <Router>
         <Provider store={store}>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            {/* <Route path="/details/:id" exact component={InfoCharacter} /> */}
-            <Route path="/info" exact component={InfoCharacter} />
-            {/* <Route path="/details/:id/edit" exact component={EditInfoCharacter} /> */}
-            <Route path="/edit" exact component={EditInfoCharacter} />
-          </Switch>
+          <PersistGate loading={null} persistor={persistor}>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/info/:id" exact component={InfoCharacter} />
+              <Route path="/edit/:id/" exact component={EditInfoCharacter} />
+            </Switch>
+          </PersistGate>
         </Provider>
         <GlobalStyle />
       </Router>

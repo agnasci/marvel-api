@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import { fetchMarvelCharacters } from '../../actions/characters'
+import { fetchMarvelCharacters } from '../../actions/getCharacters'
 
 import { MainContainer, CardsContainer } from './styles'
 
@@ -16,18 +16,19 @@ function Home() {
   }))
 
   useEffect(() => {
-    dispatch(fetchMarvelCharacters())
+    const hasLocalStorage = localStorage.getItem('persist:root')
+    hasLocalStorage || dispatch(fetchMarvelCharacters())
   }, [])
 
   return (
     <MainContainer>
-      {characterList ? (
+      {filteredCharacterList ? (
         <>
           <NavBar />
 
           <CardsContainer>
-            {characterList.length > 0 &&
-              characterList.map((item, index) => {
+            {filteredCharacterList.length > 0 &&
+              filteredCharacterList.map((item, index) => {
                 return <CharacterCard key={index} character={item} />
               })}
           </CardsContainer>
