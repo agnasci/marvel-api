@@ -32,7 +32,12 @@ const NavBar = () => {
 
       <NavDiv>
         <form onSubmit={searchCharacter}>
-          <input type="text" onChange={handleChange} value={inputValue} />
+          <input
+            type="text"
+            onChange={handleChange}
+            value={inputValue}
+            data-testid="search-input"
+          />
         </form>
       </NavDiv>
     </MainContainer>
