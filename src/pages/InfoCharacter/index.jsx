@@ -29,7 +29,6 @@ function InfoCharacter({ match }) {
     const currCharacter = characterList.find(character => +character.id === +id)
 
     setCharacterInfo(currCharacter)
-    console.log(currCharacter)
   }, [])
 
   return (

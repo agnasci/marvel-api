@@ -1,33 +1,12 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import userEvent from '@testing-library/user-event'
-import {
-  fireEvent,
-  screen,
-  waitFor,
-  waitForElement,
-} from '@testing-library/react'
-import {
-  response as mockData,
-  initialStateHeader,
-  initialStateWithExpenses,
-} from './mockData'
+import { screen } from '@testing-library/react'
+
 import Home from '../pages/Home'
 import App from '../App'
 
 import { renderWithRouterAndStore } from './testConfig'
-
-const apiResponse = Promise.resolve({
-  json: () => Promise.resolve(mockData),
-  ok: true,
-})
-
-const mockedExchange = jest
-  .spyOn(global, 'fetch')
-  .mockImplementation(() => apiResponse)
-
-afterEach(() => jest.clearAllMocks())
 
 describe('1 - [PÁGINA INICIAL] Á Pagina inicial deve ser renderizada:', () => {
   test("A rota para esta página deve ser '/'", () => {
