@@ -5,7 +5,6 @@ const INITIAL_STATE = {
 function characterStore(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'GET_CHARACTERS':
-      console.log(action.payload)
       return {
         ...state,
         characterList: action.payload,
