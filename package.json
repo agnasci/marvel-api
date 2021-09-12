@@ -1,5 +1,5 @@
 {
-  "name": "carbon-marvel",
+  "name": "api-marvel",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
